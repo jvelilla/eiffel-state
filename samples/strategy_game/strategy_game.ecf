@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<system xmlns="http://www.eiffel.com/developers/xml/configuration-1-4-0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.eiffel.com/developers/xml/configuration-1-4-0 http://www.eiffel.com/developers/xml/configuration-1-4-0.xsd" name="strategy_game" uuid="9FA99787-C8EC-4E54-928F-88B95AADB048">
+	<target name="strategy_game">
+		<root class="APPLICATION" feature="make_and_launch"/>
+		<option warning="true" syntax_level="1">
+			<assertions precondition="true" postcondition="true" check="true" invariant="true" loop="true" supplier_precondition="true"/>
+		</option>
+		<precompile name="base_pre" location="$ISE_PRECOMP\base.ecf"/>
+		<library name="base" location="$ISE_LIBRARY\library\base\base.ecf"/>
+		<library name="estate" location="..\..\library\eiffelstate.ecf"/>
+		<library name="time" location="$ISE_LIBRARY\library\time\time.ecf"/>
+		<library name="vision2" location="$ISE_LIBRARY\library\vision2\vision2.ecf"/>
+		<cluster name="strategy_game" location=".\" recursive="true">
+			<file_rule>
+				<exclude>/EIFGENs$</exclude>
+				<exclude>/.svn$</exclude>
+				<exclude>/CVS$</exclude>
+			</file_rule>
+			<file_rule>
+				<exclude>^/local_library_copy$</exclude>
+			</file_rule>
+			<file_rule>
+				<exclude>^/beings$</exclude>
+			</file_rule>
+			<file_rule>
+				<exclude>^/buildings$</exclude>
+			</file_rule>
+			<file_rule>
+				<exclude>^/resources$</exclude>
+			</file_rule>
+			<cluster name="beings" location="beings\"/>
+			<cluster name="buildings" location="buildings\"/>
+			<cluster name="resources" location="resources\"/>
+		</cluster>
+	</target>
+</system>
